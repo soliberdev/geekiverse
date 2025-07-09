@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": {
+      "es": "Combo Studio Ghibli",
+      "en": "Studio Ghibli Combo"
+    },
+    "description": {
+      "es": "Camiseta Totoro + Póster Ghibli + Gaseosa Pokebola",
+      "en": "Totoro T-shirt + Ghibli Poster + Pokeball Soda"
+    },
+    "products": [4, 7, 8],
+    "currency": "USD",
+    "comboPrice": 32
+  },
+  {
+    "id": 2,
+    "name": {
+      "es": "Combo Gamer",
+      "en": "Gamer Combo"
+    },
+    "description": {
+      "es": "Figura de Goku + Gaseosa Pokebola + Sticker Pack",
+      "en": "Goku Figure + Pokeball Soda + Sticker Pack"
+    },
+    "products": [1, 8, 10],
+    "currency": "USD",
+    "comboPrice": 29
+  },
+  {
+    "id": 3,
+    "name": {
+      "es": "Combo Otaku Snack",
+      "en": "Otaku Snack Combo"
+    },
+    "description": {
+      "es": "Figura de Naruto + Snack japonés + Póster One Piece",
+      "en": "Naruto Figure + Japanese Snack + One Piece Poster"
+    },
+    "products": [2, 9, 6],
+    "currency": "USD",
+    "comboPrice": 38
+  }
+]

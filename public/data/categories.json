@@ -1,0 +1,74 @@
+[
+  {
+    "id": "figures",
+    "name": {
+      "es": "Figuras",
+      "en": "Figures"
+    },
+    "description": {
+      "es": "Figuras coleccionables de tus personajes favoritos",
+      "en": "Collectible figures of your favorite characters"
+    },
+    "icon": "🎎"
+  },
+  {
+    "id": "clothing",
+    "name": {
+      "es": "Ropa",
+      "en": "Clothing"
+    },
+    "description": {
+      "es": "Camisetas y accesorios con diseños únicos",
+      "en": "T-shirts and wearable geek fashion"
+    },
+    "icon": "👕"
+  },
+  {
+    "id": "decor",
+    "name": {
+      "es": "Decoración",
+      "en": "Decor"
+    },
+    "description": {
+      "es": "Posters, cuadros y más para tu espacio",
+      "en": "Posters, art and decor for your space"
+    },
+    "icon": "🖼️"
+  },
+  {
+    "id": "drinks",
+    "name": {
+      "es": "Bebidas",
+      "en": "Drinks"
+    },
+    "description": {
+      "es": "Bebidas temáticas del mundo geek",
+      "en": "Geek-themed energy drinks and sodas"
+    },
+    "icon": "🥤"
+  },
+  {
+    "id": "snacks",
+    "name": {
+      "es": "Snacks",
+      "en": "Snacks"
+    },
+    "description": {
+      "es": "Dulces y snacks sorpresa de Japón",
+      "en": "Imported Japanese snacks and candies"
+    },
+    "icon": "🍘"
+  },
+  {
+    "id": "accessories",
+    "name": {
+      "es": "Accesorios",
+      "en": "Accessories"
+    },
+    "description": {
+      "es": "Stickers y detalles para personalizar tus cosas",
+      "en": "Stickers and small geeky items"
+    },
+    "icon": "🎒"
+  }
+]

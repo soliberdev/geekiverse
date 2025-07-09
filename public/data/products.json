@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "slug": "goku-funko-figure",
+    "name": {
+      "es": "Figura Funko de Goku",
+      "en": "Goku Funko Figure"
+    },
+    "description": {
+      "es": "Figura coleccionable de Goku en Super Saiyajin",
+      "en": "Collectible Goku Super Saiyan figure"
+    },
+    "currency": "USD",
+    "price": 25,
+    "imageUrl": "goku.png",
+    "categoryId": "figures",
+    "stock": 15,
+    "available": true
+  },
+  {
+    "id": 2,
+    "slug": "naruto-funko-figure",
+    "name": {
+      "es": "Figura Funko de Naruto",
+      "en": "Naruto Funko Figure"
+    },
+    "description": {
+      "es": "Figura edición especial de Naruto Uzumaki",
+      "en": "Special edition Naruto Uzumaki Funko"
+    },
+    "currency": "USD",
+    "price": 27,
+    "imageUrl": "naruto.png",
+    "categoryId": "figures",
+    "stock": 2,
+    "available": true
+  },
+  {
+    "id": 3,
+    "slug": "luffy-gear-5-figure",
+    "name": {
+      "es": "Figura de Luffy Gear 5",
+      "en": "Luffy Gear 5 Figure"
+    },
+    "description": {
+      "es": "Figura de acción de Luffy modo Gear 5",
+      "en": "Action figure of Luffy in Gear 5 form"
+    },
+    "currency": "USD",
+    "price": 30,
+    "imageUrl": "luffy.png",
+    "categoryId": "figures",
+    "stock": 8,
+    "available": true
+  },
+  {
+    "id": 4,
+    "slug": "totoro-tshirt",
+    "name": {
+      "es": "Camiseta de Totoro",
+      "en": "Totoro T-Shirt"
+    },
+    "description": {
+      "es": "Camiseta negra con ilustración de Totoro",
+      "en": "Black shirt with Totoro illustration"
+    },
+    "currency": "USD",
+    "price": 18,
+    "imageUrl": "totoro_tshirt.png",
+    "categoryId": "clothing",
+    "stock": 4,
+    "available": true
+  },
+  {
+    "id": 5,
+    "slug": "evangelion-tshirt",
+    "name": {
+      "es": "Camiseta Evangelion",
+      "en": "Evangelion T-Shirt"
+    },
+    "description": {
+      "es": "Camiseta blanca con ilustración de Unit-01",
+      "en": "White shirt with Evangelion Unit-01 artwork"
+    },
+    "currency": "USD",
+    "price": 20,
+    "imageUrl": "eva_tshirt.png",
+    "categoryId": "clothing",
+    "stock": 9,
+    "available": true
+  },
+  {
+    "id": 6,
+    "slug": "onepiece-poster",
+    "name": {
+      "es": "Póster de One Piece",
+      "en": "One Piece Poster"
+    },
+    "description": {
+      "es": "Póster de Luffy con estilo vintage",
+      "en": "Vintage-style Luffy poster"
+    },
+    "currency": "USD",
+    "price": 10,
+    "imageUrl": "onepiece_poster.png",
+    "categoryId": "decor",
+    "stock": 10,
+    "available": true
+  },
+  {
+    "id": 7,
+    "slug": "ghibli-poster",
+    "name": {
+      "es": "Póster Studio Ghibli",
+      "en": "Studio Ghibli Poster"
+    },
+    "description": {
+      "es": "Póster con collage de películas Ghibli",
+      "en": "Collage poster of Ghibli movies"
+    },
+    "currency": "USD",
+    "price": 12,
+    "imageUrl": "ghibli_poster.png",
+    "categoryId": "decor",
+    "stock": 22,
+    "available": true
+  },
+  {
+    "id": 8,
+    "slug": "pokeball-soda",
+    "name": {
+      "es": "Gaseosa Pokebola",
+      "en": "Pokeball Soda"
+    },
+    "description": {
+      "es": "Bebida energética edición Pokémon",
+      "en": "Energy drink Pokémon edition"
+    },
+    "currency": "USD",
+    "price": 5,
+    "imageUrl": "pokebola_drink.png",
+    "categoryId": "drinks",
+    "stock": 12,
+    "available": true
+  },
+  {
+    "id": 9,
+    "slug": "snack-japan",
+    "name": {
+      "es": "Snack japonés sorpresa",
+      "en": "Japanese Snack Surprise"
+    },
+    "description": {
+      "es": "Snack importado estilo japonés, sabor aleatorio",
+      "en": "Imported Japanese snack, random flavor"
+    },
+    "currency": "USD",
+    "price": 4,
+    "imageUrl": "snack_japan.png",
+    "categoryId": "snacks",
+    "stock": 15,
+    "available": true
+  },
+  {
+    "id": 10,
+    "slug": "anime-sticker-pack",
+    "name": {
+      "es": "Paquete de stickers anime",
+      "en": "Anime Sticker Pack"
+    },
+    "description": {
+      "es": "Pack con 10 stickers de diferentes animes",
+      "en": "10 assorted anime stickers"
+    },
+    "currency": "USD",
+    "price": 3,
+    "imageUrl": "stickers.png",
+    "categoryId": "accessories",
+    "stock": 5,
+    "available": true
+  }
+]
