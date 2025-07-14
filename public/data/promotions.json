@@ -9,7 +9,7 @@
     "condition": {
       "category": "figures",
       "minQuantity": 3,
-      "discount": "33%"
+      "payFor": 2
     }
   },
   {
