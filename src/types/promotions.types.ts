@@ -3,25 +3,51 @@ import type { Product } from "./product.types";
 export type PromoDetails = {
   id: string;
   description: string;
+  reason: string;
   totalPromoApplied: number;
 };
 
 export type ApplyFreeGiftResult =
-    | {valid: true; type: PromoType; gifts: (Product & { quantity: number })[]; promoDetails: PromoDetails}
-    | {valid: false; message: string};
+    | {
+        valid: true;
+        type: PromoType;
+        gifts: (Product & { quantity: number })[];
+        promoDetails: PromoDetails
+      }
+    | {
+        valid: false;
+        message: string
+      };
 
 export type ApplyFreeFigureResult = 
-    | {valid: true; type: PromoType; discount: number; appliedTo: (Product & { quantity: number })[], promoDetails: PromoDetails}
-    | {valid: false; message: string}
+    | {
+        valid: true;
+        type: PromoType;
+        discount: number;
+        appliedTo: (Product & { quantity: number })[],
+        promoDetails: PromoDetails
+      }
+    | {
+        valid: false; 
+        message: string
+      }
 
 export type ApplyFreeShippingResult = 
-    | {valid: true; type: PromoType; totalShipping: number; promoDetails: PromoDetails}
-    | {valid: false; totalShipping: number}
+    | {
+        valid: true;
+        type: PromoType;
+        totalShipping: number;
+        promoDetails: PromoDetails
+      }
+    | {
+        valid: false;
+        totalShipping: number
+      }
 
 export type GiftSummary = {
-    name: string;      
-    quantity: number;
-    reason: string 
+  name: string;      
+  quantity: number;
+  reason: string 
 }
 
 export const PromoType = {
