@@ -4,7 +4,7 @@ import Image from 'next/image';
 export const Hero = () => {
   return (
     <section className="w-full mt-8" aria-label="Hero section introducing Geekibot">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 border-2 border-blue-200">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col gap-10 items-center lg:items-start">
             <HeroTitle />
             <HeroDescription />
@@ -30,7 +30,7 @@ export const Hero = () => {
 
 const HeroTitle = () => { 
   return (
-    <h1 className="font-bangers uppercase text-6xl lg:text-7xl lg:text-start">Buy anime products with the help of an AI, 
+    <h1 className="font-bangers uppercase text-6xl lg:text-7xl lg:text-start">Buy anime products with the help of an AI,  
       <span className="text-7xl lg:text-8xl text-brick-red-500 drop-shadow-custom tracking-wider"> 
         Geekibot
       </span>
@@ -38,7 +38,7 @@ const HeroTitle = () => {
 )};
 
 const HeroDescription = () => (
-  <p className="text-lg lg:text-xl">
+  <p className="text-lg lg:text-xl lg:text-start">
     A conversational assistant that guides you through ordering, and managing your favorite anime products.
   </p>
 );

@@ -3,6 +3,7 @@ import { Bangers, DM_Sans } from "next/font/google";
 import NoiseOverlay from "./components/ui/NoiseOverlay";
 import Image from 'next/image';
 import "./styles/globals.css";
+import { AiChatAssistant } from "./components/AiChatAssistant/AiChatAssistant";
 
 const bangers = Bangers({
   weight: "400",
@@ -32,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${bangers.variable} antialiased px-8`}
       >
-        <header className="flex items-center p-4 bg-gray-100 border">
+        <header className="flex items-center p-4 bg-gray-100">
           <div className="relative w-40 aspect-[951/291]">
             <Image
                 src="/Logo.png"
@@ -44,18 +45,19 @@ export default function RootLayout({
             />
           </div>
 
-          <div className="flex flex-row text-end">
+          {/* <div className="flex flex-row text-end">
             <button>Change</button>
             <div>Carrito</div>
-          </div>
+          </div> */}
         </header>
 
         <main>{children}</main>
 
-        <footer className="p-4 bg-gray-100 dark:bg-gray-800 text-center">
-          © 2025 Mi App
+        <footer className="mt-10 p-4 bg-gray-100 dark:bg-gray-50 text-center">
+          © 2025 Geekiverse, developed by Sofia Libertad
         </footer>
         <NoiseOverlay />
+        <AiChatAssistant />
       </body>
     </html>
   );
