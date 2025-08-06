@@ -19,7 +19,7 @@ const Logos: Logo[] = [
 
 export const LogoCarousel = () => {
   return (
-    <section className="mt-22 overflow-x-clip border border-blue-800">
+    <section className="mt-26 overflow-x-clip mb-36">
         <div className='flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]'>
             <motion.div 
                 animate={{
