@@ -5,15 +5,14 @@ import { ChatInput } from "./ChatInput";
 import { useChat } from "@ai-sdk/react";
 import { UserMessage } from "./UserMessage";
 import { AiMessage } from "./AiMessage";
+import { useAiChat } from "@/app/context/AiChat/useAiChat";
 
 export const AiChatAssistant = () => {
-    const [isOpen, setIsOpen] = useState(false);
+
+    const { chatIsOpen, toggleOpenAiChat } = useAiChat();
+
     const [input, setInput] = useState('');
     const { messages, sendMessage } = useChat();
-    
-    const handleContainerClick = () => {
-        setIsOpen(!isOpen);
-    };
 
     const handleSend = () => {
         if (!input.trim()) return;
@@ -27,9 +26,9 @@ export const AiChatAssistant = () => {
             style={{ filter: 'var(--drop-shadow-custom-hat)' }}
         >
             
-            {!isOpen && (
+            {!chatIsOpen && (
             <div className="cursor-pointer select-none relative"
-                onClick={handleContainerClick}
+                onClick={toggleOpenAiChat}
             >
                 <div className="absolute -top-10 -left-2 md:-left-4">
                     <img src="/img/Hat.png" alt="Luffy's Hat" className="w-30 drop-shadow-custom-2" />
@@ -41,12 +40,12 @@ export const AiChatAssistant = () => {
             </div>
             )}
          
-            {isOpen && (
+            {chatIsOpen && (
                 <div className="mt-2 p-2 bg-[#1a1a1a] rounded-lg relative flex flex-col gap-2 justify-center  max-h-[70vh] min-h-[70vh]">
                     <img src="/img/Luffy.png" alt="Luffy" className="absolute w-[38%] md:w-[50%] md:-top-38 -top-30 drop-shadow-custom-3" />
                     <button
                         className="absolute -top-10 right-0 text-black cursor-pointer hover:rotate-20 transition-all ease-in-out"
-                        onClick={handleContainerClick}
+                        onClick={toggleOpenAiChat}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                     </button>

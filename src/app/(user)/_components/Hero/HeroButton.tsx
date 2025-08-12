@@ -1,8 +1,15 @@
+'use client'
+
+import { useAiChat } from "@/app/context/AiChat/useAiChat"
+
 export const HeroButton = () => {
+  const { chatIsOpen, toggleOpenAiChat} = useAiChat();
+
   return (
     <button 
       className="group relative text-lg bg-brick-red-500 hover:bg-brick-red-600 w-3xs p-4  text-white border-2 border-woodsmoke-500 rounded-lg shadow-custom-woodsmoke cursor-pointer active:translate-1.5 active:shadow-none transition-all duration-200 ease-in-out"
       aria-label="Open chatbot and discover products"
+      onClick={toggleOpenAiChat}
     >
       <div className="relative overflow-hidden flex flex-col items-center">
           <span className="inline-block transition-transform duration-300 group-hover:-translate-y-8">

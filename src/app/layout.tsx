@@ -4,6 +4,7 @@ import NoiseOverlay from "./components/ui/NoiseOverlay";
 import Image from 'next/image';
 import "./styles/globals.css";
 import { AiChatAssistant } from "./components/AiChatAssistant/AiChatAssistant";
+import { AiChatProvider } from "./context/AiChat/AiChatProvider";
 
 const bangers = Bangers({
   weight: "400",
@@ -30,35 +31,37 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${dmSans.variable} ${bangers.variable} antialiased px-8`}
-      >
-        <header className="flex items-center p-4 bg-gray-100">
-          <div className="relative w-40 aspect-[951/291]">
-            <Image
-                src="/Logo.png"
-                alt="Geekiverse Logo"
-                fill
-                priority
-                sizes="160px"
-                className="object-contain"
-            />
-          </div>
+      <AiChatProvider>
+        <body
+          className={`${dmSans.variable} ${bangers.variable} antialiased px-8`}
+        >
+          <header className="flex items-center p-4 bg-gray-100">
+            <div className="relative w-40 aspect-[951/291]">
+              <Image
+                  src="/Logo.png"
+                  alt="Geekiverse Logo"
+                  fill
+                  priority
+                  sizes="160px"
+                  className="object-contain"
+              />
+            </div>
 
-          {/* <div className="flex flex-row text-end">
-            <button>Change</button>
-            <div>Carrito</div>
-          </div> */}
-        </header>
+            <div className="flex flex-row text-end">
+              <button>Change</button>
+              <div>Carrito</div>
+            </div>
+          </header>
 
-        <main>{children}</main>
+          <main>{children}</main>
 
-        <footer className="mt-10 p-4 bg-gray-100 dark:bg-gray-50 text-center">
-          © 2025 Geekiverse, developed by Sofia Libertad
-        </footer>
-        <NoiseOverlay />
-        <AiChatAssistant />
-      </body>
+          <footer className="mt-10 p-4 bg-gray-100 dark:bg-gray-50 text-center">
+            © 2025 Geekiverse, developed by Sofia Libertad
+          </footer>
+          <NoiseOverlay />
+          <AiChatAssistant />
+        </body>
+      </AiChatProvider>
     </html>
   );
 }
