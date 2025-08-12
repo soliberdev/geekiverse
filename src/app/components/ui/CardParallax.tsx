@@ -18,7 +18,10 @@ export const CardParallax = () => {
     return (
         <div>
             {cardData.map((card, index) => (
-                <div id="imge-item" className="h-[55vh] lg:h-[70vh] flex items-start justify-center sticky top-60 lg:top-45 bg-brick-red-600">
+                <div
+                    key={`${card.title}-${index}`} 
+                    className="h-[55vh] lg:h-[70vh] flex items-start justify-center sticky top-60 lg:top-45 bg-brick-red-600"
+                >
                     <Card
                         key={card.title}
                         cardTitle={card.title}
