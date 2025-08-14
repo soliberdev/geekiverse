@@ -1,0 +1,38 @@
+[
+  {
+    "id": "promo_3x2_figures",
+    "type": "discount",
+    "description": {
+      "es": "Lleva 3 figuras y paga solo 2",
+      "en": "Buy 3 figures, pay only for 2"
+    },
+    "condition": {
+      "category": "figures",
+      "minQuantity": 3,
+      "payFor": 2
+    }
+  },
+  {
+    "id": "promo_free_shipping",
+    "type": "shipping",
+    "description": {
+      "es": "Envío gratis por compras superiores a $50",
+      "en": "Free shipping on orders over $50"
+    },
+    "condition": {
+      "minPurchase": 50
+    }
+  },
+  {
+    "id": "promo_combo_stickers",
+    "type": "gift",
+    "description": {
+      "es": "Llévate un pack de stickers gratis al comprar cualquier combo",
+      "en": "Get a free sticker pack with any combo purchase"
+    },
+    "condition": {
+      "comboPurchase": true,
+      "gift": "anime-sticker-pack"
+    }
+  }
+]
