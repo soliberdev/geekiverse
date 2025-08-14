@@ -1,24 +1,26 @@
 'use client'
 
-import { useState } from "react";
 import { ChatInput } from "./ChatInput";
-import { useChat } from "@ai-sdk/react";
 import { UserMessage } from "./UserMessage";
 import { AiMessage } from "./AiMessage";
 import { useAiChat } from "@/app/context/AiChat/useAiChat";
+import { ChatLoader } from "../ui/ChatLoader";
+import { useEffect, useRef } from "react";
 
 export const AiChatAssistant = () => {
 
-    const { chatIsOpen, toggleOpenAiChat } = useAiChat();
+    const { chatIsOpen, toggleOpenAiChat, input, setInput, handleSend, messages, status } = useAiChat();
+    const bottomRef = useRef<HTMLDivElement | null>(null);
 
-    const [input, setInput] = useState('');
-    const { messages, sendMessage } = useChat();
+    useEffect(()=> {
+        bottomRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    },[messages]);
 
-    const handleSend = () => {
-        if (!input.trim()) return;
-        sendMessage({ text: input });
-        setInput('');
-    };
+    useEffect(() => {
+        if(chatIsOpen){
+            bottomRef.current?.scrollIntoView({ behavior: 'auto', block: 'end' });
+        }
+    }, [chatIsOpen]);
 
     return (
         <div 
@@ -49,7 +51,7 @@ export const AiChatAssistant = () => {
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                     </button>
-                    <div className="mt-2 px-2 w-full overflow-y-auto flex-1 flex flex-col gap-5">
+                    <div className="mt-2 px-2 w-full overflow-y-auto flex-1 flex flex-col gap-5 custom-scrollbar">
                         {messages.map((message) => (
                             <div key={message.id} className="flex flex-col whitespace-pre-wrap text-white">
                             {message.role === 'user' ? 
@@ -59,6 +61,9 @@ export const AiChatAssistant = () => {
                             }
                             </div>
                         ))}
+
+                        {(status === 'submitted') && <ChatLoader />}
+                        <div ref={bottomRef} />
                     </div>
                     <ChatInput input={input} setInput={setInput} onSend={handleSend} />
                 </div>

@@ -9,7 +9,7 @@ type RoleProviderProps = {
     children: ReactNode;
 };
 
-const RoleProvider = ({ children }: RoleProviderProps) => {
+export const RoleProvider = ({ children }: RoleProviderProps) => {
     const [role, setRole] = useState<UserRole>('User');
     const router = useRouter();
 
@@ -33,5 +33,3 @@ const RoleProvider = ({ children }: RoleProviderProps) => {
     </RoleContext.Provider>
     );
 };
-
-export default RoleProvider;
