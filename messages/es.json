@@ -1,0 +1,26 @@
+{
+  "HomePage": {
+    "Hero": {
+      "title": "Compra productos de anime con la ayuda de una IA,",
+      "subtitle": "Es un asistente conversacional que te guía para pedir y gestionar tus productos de anime favoritos.",
+      "cta": "Descubrir productos"
+    },
+    "HowItWorks": {
+      "title": "Cómo funciona",
+      "card1title": "Pregunta",
+      "card1description": "Pide productos de anime como si estuvieras chateando en WhatsApp.",
+      "card2title": "Explora",
+      "card2description": "El asistente te mostrará lo que está disponible, con precios y descripciones.",
+      "card3title": "Haz tu pedido",
+      "card3description": "Solo di lo que quieres, y Geekibot lo registrará como un pedido real.",
+      "card4title": "Modifica o cancela",
+      "card4description": "¿Cambiaste de opinión? Solo dilo, y Geekibot actualizará tu pedido."
+    },
+    "Footer": {
+      "description": "© 2025 Geekiverse, desarrollado por Sofía Libertad"
+    }
+  },
+  "AiAssistant": {
+    "initialMessageDefault": "¡Hola! 👋 Soy Geekibot, tu asistente de compras de anime en Geekiverse. ¿Buscas merch? ¡Vamos a encontrar algo que te encante! 💫"
+  }
+}
