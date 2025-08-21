@@ -4,7 +4,7 @@ import { ChatInput } from "./ChatInput";
 import { UserMessage } from "./UserMessage";
 import { AiMessage } from "./AiMessage";
 import { useAiChat } from "@/app/context/AiChat/useAiChat";
-import { ChatLoader } from "../ui/ChatLoader";
+import { ChatLoader } from "./ChatLoader";
 import { useEffect, useRef } from "react";
 
 export const AiChatAssistant = () => {

@@ -2,7 +2,13 @@
 
 import { FormEvent } from 'react';
 
-export const ChatInput = ({ input, setInput, onSend }) => {
+type ChatInputProps = {
+  input: string;
+  setInput: (value: string) => void;
+  onSend: () => void;
+};
+
+export const ChatInput = ({ input, setInput, onSend }: ChatInputProps) => {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
