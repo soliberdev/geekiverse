@@ -4,6 +4,7 @@ import { ReactNode, useEffect, useMemo, useState } from "react";
 import { AiChatContext } from "./AiChatContext";
 import { useChat } from "@ai-sdk/react";
 import type { UIMessage } from "ai";
+import { useLocale, useTranslations } from "next-intl";
 
 
 type AiChatProviderProps = {
@@ -13,6 +14,10 @@ type AiChatProviderProps = {
 export const AiChatProvider = ({ children }: AiChatProviderProps) => {
   const [chatIsOpen, setChatIsOpen] = useState(false);
   const [input, setInput] = useState('');
+  const locale = useLocale();
+  const t = useTranslations('AiAssistant');
+
+  const storageKey = useMemo(() => `chatMessages:${locale}`, [locale]);
 
   const greetingMessage = useMemo<UIMessage[]>(() => [
     {
@@ -21,18 +26,17 @@ export const AiChatProvider = ({ children }: AiChatProviderProps) => {
       parts: [
         {
           type: 'text',
-          text:
-            "Hi there! 👋 I’m Geekibot, your anime shopping buddy at Geekiverse. Looking for merch? Let’s find something you’ll love! 💫",
+          text: t('initialMessageDefault'),
         },
       ],
     },
-  ], []);
+  ], [t]);
 
   const getInitialMessages = (): UIMessage[] => {
     if (typeof window === "undefined") {
       return greetingMessage;
     }
-    const savedMessages = sessionStorage.getItem("chatMessages");
+    const savedMessages = sessionStorage.getItem(storageKey);
     const parsedMessages = savedMessages ? JSON.parse(savedMessages) : [];
     return parsedMessages.length > 0 ? parsedMessages : greetingMessage;
   };
@@ -53,10 +57,10 @@ export const AiChatProvider = ({ children }: AiChatProviderProps) => {
   };
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem("chatMessages", JSON.stringify(messages));
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem(storageKey, JSON.stringify(messages));
     }
-  }, [messages]);
+  }, [messages, storageKey]);
 
   return (
     <AiChatContext.Provider value={{ chatIsOpen, toggleOpenAiChat, input, setInput, handleSend, messages, status}}>
