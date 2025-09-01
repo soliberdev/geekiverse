@@ -12,7 +12,7 @@
     },
     "currency": "USD",
     "price": 25,
-    "imageUrl": "goku.png",
+    "imageUrl": "/img/Products/goku-funko-figure.png",
     "categoryId": "figures",
     "stock": 15
   },
@@ -29,7 +29,7 @@
     },
     "currency": "USD",
     "price": 27,
-    "imageUrl": "naruto.png",
+    "imageUrl": "/img/Products/naruto-funko-figure.png",
     "categoryId": "figures",
     "stock": 2
   },
@@ -46,7 +46,7 @@
     },
     "currency": "USD",
     "price": 30,
-    "imageUrl": "luffy.png",
+    "imageUrl": "/img/Products/luffy-gear5-figure.png",
     "categoryId": "figures",
     "stock": 8
   },
@@ -63,7 +63,7 @@
     },
     "currency": "USD",
     "price": 18,
-    "imageUrl": "totoro_tshirt.png",
+    "imageUrl": "/img/Products/totoro-tshirt.png",
     "categoryId": "clothing",
     "stock": 4
   },
@@ -80,7 +80,7 @@
     },
     "currency": "USD",
     "price": 20,
-    "imageUrl": "eva_tshirt.png",
+    "imageUrl": "/img/Products/evangelion-tshirt.png",
     "categoryId": "clothing",
     "stock": 9
   },
@@ -97,7 +97,7 @@
     },
     "currency": "USD",
     "price": 10,
-    "imageUrl": "onepiece_poster.png",
+    "imageUrl": "/img/Products/onepiece-poster.png",
     "categoryId": "decor",
     "stock": 10
   },
@@ -114,7 +114,7 @@
     },
     "currency": "USD",
     "price": 12,
-    "imageUrl": "ghibli_poster.png",
+    "imageUrl": "/img/Products/ghibli-poster.png",
     "categoryId": "decor",
     "stock": 22
   },
@@ -131,7 +131,7 @@
     },
     "currency": "USD",
     "price": 5,
-    "imageUrl": "pokebola_drink.png",
+    "imageUrl": "/img/Products/pokeball-soda.png",
     "categoryId": "drinks",
     "stock": 12
   },
@@ -148,7 +148,7 @@
     },
     "currency": "USD",
     "price": 4,
-    "imageUrl": "snack_japan.png",
+    "imageUrl": "/img/Products/snack-japan.png",
     "categoryId": "snacks",
     "stock": 15
   },
@@ -165,7 +165,7 @@
     },
     "currency": "USD",
     "price": 3,
-    "imageUrl": "stickers.png",
+    "imageUrl": "/img/Products/anime-sticker-pack.png",
     "categoryId": "accessories",
     "stock": 10
   }
