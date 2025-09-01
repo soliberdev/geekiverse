@@ -44,14 +44,14 @@ export const applyFreeGiftPromo = ({items, combos}: ShoppingCart, products: Prod
     if (!promotion) {
         return {
             valid: false,
-            message: 'No se encontró la promoción de regalo.'
+            message: 'Free Gift promotion not found.'
         };
     }
 
     if (combos.length === 0) {
         return {
             valid: false,
-            message: 'La promoción de regalo aplica solo si hay combos en el carrito.'
+            message: 'The gift promotion applies only if there are combos in the cart.'
         };
     }
 
@@ -59,7 +59,7 @@ export const applyFreeGiftPromo = ({items, combos}: ShoppingCart, products: Prod
     if (!giftSlug) {
         return {
             valid: false,
-            message: 'Producto de regalo no válido.'
+            message: 'Invalid gift product.'
         };
     }
 
@@ -67,7 +67,7 @@ export const applyFreeGiftPromo = ({items, combos}: ShoppingCart, products: Prod
     if (!gift) {
         return {
             valid: false,
-            message: 'Producto de regalo no disponible.'
+            message: 'Gift product not available.'
         };
     }
 
@@ -90,7 +90,7 @@ export const applyFreeGiftPromo = ({items, combos}: ShoppingCart, products: Prod
     } catch (error) {
         return {
             valid: false,
-            message: 'No hay stock suficiente para aplicar el regalo gratuito.'
+            message: 'There is not enough stock to apply the free gift.'
         };
     }
 };
@@ -100,7 +100,7 @@ export const apply3x2Promo = ({items}: ShoppingCart, products: Product[], promot
     if (!promotion) {
         return {
             valid: false,
-            message: 'No se encontró la promoción de regalo.'
+            message: 'Gift promotion not found.'
         };
     }
 
