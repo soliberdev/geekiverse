@@ -1,18 +1,17 @@
 'use client'
 
+import { useAiChat } from '@/app/context/AiChat/useAiChat';
 import { FormEvent } from 'react';
 
-type ChatInputProps = {
-  input: string;
-  setInput: (value: string) => void;
-  onSend: () => void;
-};
-
-export const ChatInput = ({ input, setInput, onSend }: ChatInputProps) => {
+export const ChatInput = () => {
+    const { input, setInput, handleSend, chatIsOpen, toggleOpenAiChat } = useAiChat();
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        onSend();
+        handleSend();
+        if (!chatIsOpen) {
+            toggleOpenAiChat();
+        }
     };
 
     return (

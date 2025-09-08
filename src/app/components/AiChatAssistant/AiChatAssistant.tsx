@@ -9,7 +9,7 @@ import { useEffect, useRef } from "react";
 
 export const AiChatAssistant = () => {
 
-    const { chatIsOpen, toggleOpenAiChat, input, setInput, handleSend, messages, status } = useAiChat();
+    const { chatIsOpen, toggleOpenAiChat, messages, status } = useAiChat();
     const bottomRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(()=> {
@@ -37,7 +37,7 @@ export const AiChatAssistant = () => {
                 </div>
 
                 <div className="bg-red-800 p-2 rounded-lg">
-                    <ChatInput input={input} setInput={setInput} onSend={handleSend} />
+                    <ChatInput />
                 </div>
             </div>
             )}
@@ -65,7 +65,7 @@ export const AiChatAssistant = () => {
                         {(status === 'submitted') && <ChatLoader />}
                         <div ref={bottomRef} />
                     </div>
-                    <ChatInput input={input} setInput={setInput} onSend={handleSend} />
+                    <ChatInput />
                 </div>
             )}
         </div>
